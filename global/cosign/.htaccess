@@ -1,0 +1,6 @@
+SSLRequireSSL
+ErrorDocument 503 https://wiki.eecs.umich.edu/index.php
+
+CosignProtected On
+AuthType Cosign
+Require valid-user

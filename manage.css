@@ -1,0 +1,49 @@
+body {
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+	background: #dce2ef;
+	font-family: Sans-serif;
+	height: 98%;
+}
+
+h1 {
+	text-align: center;
+}
+
+a:link { color: #004583; }
+a:visited { color: #004583; }
+
+table {
+	border: none;
+	width: 100%;
+	text-align: center;
+	table-layout: fixed;
+}
+
+table td {
+	padding: 5px;
+}
+
+table th {
+	background: #004583;
+	color: white;
+}
+
+#menu {
+	text-align: center;
+	border: 1px solid #004583;
+	padding: 10px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#footer {
+	height: 40px;
+	/*position: absolute;*/
+	padding-top: 100px;
+	width: 700px;
+	/*bottom: 0;*/
+	font-size: 65%;
+	text-align: center;
+}
