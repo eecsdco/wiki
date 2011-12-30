@@ -98,8 +98,8 @@ For the sake of clarity, here is the required section of the ssl.conf file.
 <IfModule mod_cosign.c>
 
 	# Configure CoSign
-	CosignProtected                     Off
-    CosignHostname                      weblogin.umich.edu
+	CosignProtected						Off
+	CosignHostname						weblogin.umich.edu
     CosignRedirect                      https://weblogin.umich.edu/
     CosignPostErrorRedirect             https://weblogin.umich.edu/cosign/post_error.html
     CosignService                       eecs-wiki
