@@ -1,28 +1,35 @@
-####################################################################################################
-#
-# EECS WIKI SERVER
-# MediaWiki farm manager customized for the EECS environment.
-# 
-# Departmental Computing Organization
-# Department of Electrical Engineering and Computer Science
-# The University of Michigan
-#
-####################################################################################################
+EECS Wiki Server
+================
 
-This project is maintained by Matt Colf.
+MediaWiki farm manager customized for the EECS environment. Developed for the Department of
+Electrical Engineering and Computer Science at the University of Michigan.
 
-####################################################################################################
-# REQUIREMENTS
-####################################################################################################
+Notice
+------
+
+This project is still under development and should not be used in a live environment. At best, 
+this could be considered an alpha release. It's a bit hacked together in places.
+
+Features
+--------
+
+- Cosign integration
+- Group based permissions
+- Administrator control panel for each wiki instance
+- Automated deployment of new wiki instances
+- Automated upgrades of each wiki instance
+
+
+Requirements
+------------
 
 - Apache setup and working
 - mySQL setup and working with known root username and password (enter into root/global/config.php)
 - Cosign module setup and working with Apache SSL server
 - Directy structure as outlined below
 
-####################################################################################################
-# DIRECTORY STRUCTURE
-####################################################################################################
+Directory Structure
+-------------------
 
 root								the root directory of the apache SSL server
 	global	
@@ -43,9 +50,8 @@ root								the root directory of the apache SSL server
 		WIKI-NAME --> ../global/mediawiki/current					
 	manage							contains the end-user management area
 	
-####################################################################################################
-# PERMISSIONS
-####################################################################################################
+Permissions
+-----------
 
 Apache must have R+W+E permission (7) on the following directories and files.
 
@@ -57,9 +63,8 @@ root/global/mediawiki/offline
 root/global/mediawiki/upgrade
 root/instances (and everything below)
 
-####################################################################################################
-# CUSTOM FILES WITHIN MEDIAWIKI SOURCE
-####################################################################################################
+Custom Files Within MediaWiki Source
+------------------------------------
 
 In order to work within the EECS environment, the following files must exist in the MediaWiki source
 for each version. If you add a new version (i.e. 1.19 or above) then you must copy them from older
@@ -81,9 +86,8 @@ Developer Docs: http://www.mediawiki.org/wiki/Manual:Contents
 Extension Hook Docs: http://www.mediawiki.org/wiki/Manual:Hooks
 	(used in eecs_environment.php extension)
 												
-####################################################################################################
-# APACHE CONFIGURATION
-####################################################################################################
+Apache Configuration
+--------------------
 
 The EECS wiki server uses apache in SSL only. However, both the *:80 and *:443 servers must have
 their document roots set to the same location. You must setup your ssl.conf as shown in the 
@@ -91,6 +95,7 @@ included ssl.conf file.
 
 For the sake of clarity, here is the required section of the ssl.conf file.
 
+```
 <VirtualHost _default_:443>
 
 ...
@@ -181,3 +186,21 @@ For the sake of clarity, here is the required section of the ssl.conf file.
 </IfModule>
 
 </VirtualHost>
+```
+
+Legal
+-----
+
+Copyright (c) 2011, Matt Colf
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
