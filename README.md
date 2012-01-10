@@ -86,9 +86,8 @@ Because of this, it should be (relatively) easy to upgrade to each new version o
 However, the MediaWiki source may change over time. You should check the developer documentation
 before upgradign instances to a new version of MediaWiki. 
 
-Developer Docs: http://www.mediawiki.org/wiki/Manual:Contents
-Extension Hook Docs: http://www.mediawiki.org/wiki/Manual:Hooks
-	(used in eecs_environment.php extension)
+- Developer Docs: http://www.mediawiki.org/wiki/Manual:Contents
+- Extension Hook Docs: http://www.mediawiki.org/wiki/Manual:Hooks (used in eecs_environment.php extension)
 												
 Apache Configuration
 --------------------
