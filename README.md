@@ -31,6 +31,7 @@ Requirements
 Directory Structure
 -------------------
 
+```
 root								the root directory of the apache SSL server
 	global	
 		config.php					rename the stock config.dist.php and enter your database info
@@ -49,19 +50,20 @@ root								the root directory of the apache SSL server
 	instances 						each wiki needs an entry here (created automatically)
 		WIKI-NAME --> ../global/mediawiki/current					
 	manage							contains the end-user management area
+```
 	
 Permissions
 -----------
 
 Apache must have R+W+E permission (7) on the following directories and files.
 
-root/global/data (and everything below)
-root/global/mediawiki
-root/global/mediawiki/current
-root/global/mediawiki/beta
-root/global/mediawiki/offline
-root/global/mediawiki/upgrade
-root/instances (and everything below)
+- root/global/data (and everything below)
+- root/global/mediawiki
+- root/global/mediawiki/current
+- root/global/mediawiki/beta
+- root/global/mediawiki/offline
+- root/global/mediawiki/upgrade
+- root/instances (and everything below)
 
 Custom Files Within MediaWiki Source
 ------------------------------------
@@ -70,10 +72,12 @@ In order to work within the EECS environment, the following files must exist in 
 for each version. If you add a new version (i.e. 1.19 or above) then you must copy them from older
 directory (i.e. 1.18). 
 
+```
 mediawiki/LocalSettings.php						configures MediaWiki at runtime (db, extensions)
 mediawiki/extensions/eecs_environment.php		configured MediaWiki to work in EECS environment
 mediawiki/extensions/*							all other extensions listed at the bottom of 
 												LocalSettings.php
+```
 												
 The goal of this project was to NOT modify MediaWiki in any way that cannot be done with 
 extension hookse or API calls (i.e. all changes are made in LocalSettings.php or in an extension).
