@@ -84,7 +84,7 @@ extension hookse or API calls (i.e. all changes are made in LocalSettings.php or
 Because of this, it should be (relatively) easy to upgrade to each new version of MediaWiki. 
 
 However, the MediaWiki source may change over time. You should check the developer documentation
-before upgradign instances to a new version of MediaWiki. 
+before upgrading instances to a new version of MediaWiki. 
 
 - Developer Docs: http://www.mediawiki.org/wiki/Manual:Contents
 - Extension Hook Docs: http://www.mediawiki.org/wiki/Manual:Hooks (used in eecs_environment.php extension)
